@@ -1,0 +1,75 @@
+// 官方默认样式会导致鼠标经过一级菜单时侧边菜单栏出现抖动的情况
+.ant-menu-inline .ant-menu-item, .ant-menu-inline .ant-menu-submenu-title {
+  /* width: calc(100% + 1px); */
+  width: 100%;
+}
+
+// 树组件默认鼠标样式修改, 以及默认的占位图标大小设置为空
+.ant-tree{
+  cursor: pointer;
+  .ant-tree-icon__docu{
+    width: 0!important;
+    height: 0!important;
+  }
+}
+
+// 官方默认样式设置的width: 100%, 后面又有设置了 width: 90px把自己样式覆盖了，这里我们需要覆盖一下官方样式
+.ant-input-number{
+  width: 100% !important;
+}
+
+// 官方默认样式无法使我们要的tooltip呈现段落显示的效果
+.ant-tooltip-inner span{
+  display: inline-block;
+  white-space: pre-line;
+}
+
+// 顶部栏 tabs
+.layout-header .vue-portal-target .ant-tabs-top-bar {
+  margin-bottom: 0;
+}
+
+// 块布局下的表格分页组件，导致块底部 padding 过大
+.sw-section {
+  > .ant-table-wrapper .ant-table-pagination {
+    margin-bottom: 0;
+  }
+}
+
+// 统一表头颜色
+.ant-table-thead > tr > th,
+tr.ant-table-expanded-row {
+  background: #F5F7FA;
+}
+
+// cell padding 默认 16px 根据 UI 调整为 14px
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td {
+  padding: 14px 14px;
+}
+
+// alert 文字颜色「设计规范」
+.ant-alert-message {
+  color: #5A5C60;
+}
+
+.ant-input-affix-wrapper {
+  .anticon-close-circle {
+    display: none;
+  }
+  &:hover {
+    .anticon-close-circle {
+      display: block;
+    }
+  }
+}
+
+.ant-table-placeholder {
+  border-bottom: none !important;
+}
+
+// 表单 help 文字规范
+.ant-form-explain, .ant-form-extra {
+  font-size: 12px;
+  color: #878A90;
+}

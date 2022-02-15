@@ -1,0 +1,12 @@
+{
+  "name": "qiankun-vue3",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "node scripts/index.js --serial install",
+    "serve:all": "node scripts/index.js --parallel serve",
+    "build:all": "yarn run buildApp && yarn run cpApp",
+    "buildApp": "node scripts/index.js --serial build",
+    "cpApp": "node scripts/build.js" 
+  }
+}

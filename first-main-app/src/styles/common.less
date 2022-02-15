@@ -1,0 +1,63 @@
+@import "./variables.less";
+@import "./mixins.less";
+
+// 设置背景色
+.bg-color-base {
+  background-color: @--bg-color-base;
+}
+
+// flex 居中
+.sw-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// 全屏展示（固定定位）
+.sw-full-screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1024;
+}
+
+
+// 文本溢出
+.sw-ellipsis {
+  .ellipsis();
+}
+
+.sw-multi-ellipsis--l2 {
+  .multi-ellipsis(2);
+}
+
+.sw-multi-ellipsis--l3 {
+  .multi-ellipsis(3);
+}
+
+
+// 隐藏滚动条（chrome/safari）
+.sw-hide-scroll-bar {
+  -ms-overflow-style: none; // IE 10+
+  overflow: -moz-scrollbars-none; // firefox
+  &::-webkit-scrollbar { // chrome safari
+    display: none;
+  }
+}
+
+// font color
+.sw-color-danger {
+  color: @--color-danger;
+}
+.sw-color-primary {
+  color: @--color-primary;
+}
+
+.between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+

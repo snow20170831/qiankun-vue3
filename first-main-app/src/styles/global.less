@@ -1,0 +1,121 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  -webkit-text-size-adjust: none; // 全局字体可设置小于12px
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // 禁止ios点击元素的背景
+}
+
+li {
+  list-style: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-container{
+  background: #fff;
+  padding: 16px 24px;
+}
+
+.panel {
+  padding: 30px 50px;
+  margin-bottom: 20px;
+  background: #fff;
+}
+
+.panel-title {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 30px;
+  .flexLayout(center, flex-start);
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 18px;
+    background: @primary-color;
+    margin-right: 10px;
+  }
+}
+
+// 上传组件文案间隔
+.ant-upload-picture-card-wrapper{
+  display: block;
+  margin-bottom: 2px;
+}
+
+// 弹框最小宽度
+.ant-modal{
+  min-width: 500px;
+}
+
+// 查看大图
+.model-img{
+  max-width: 1000px;
+  display: block;
+  margin: auto;
+}
+
+// 按钮组
+.action-view{
+  padding-left: 166px;
+  .ant-btn{
+    margin-right: 10px;
+  }
+}
+
+// tabs 组件布局
+.a-tabs{
+  background: #fff;
+  .ant-tabs-bar{
+    padding-left: 20px;
+    margin: 0;
+  }
+}
+
+// 活动盒子
+.activity-box{
+  width: 65%;
+  margin: 40px auto 100px;
+  .step{
+    background: #fff;
+    padding: 30px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  .title{
+    font-size: 16px;
+    margin: 30px 0;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0 10px 15px;
+    vertical-align: middle;
+  }
+}
+
+// 垂直滚动条
+.vertical-scrollbar{
+  &::-webkit-scrollbar{
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb{
+    border-radius: 3px;
+    background: #ccc;
+  }
+}
+
+// 水平滚动条
+.horizontal-scrollbar{
+  &::-webkit-scrollbar{
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb{
+    border-radius: 3px;
+    background: #ccc;
+  }
+}

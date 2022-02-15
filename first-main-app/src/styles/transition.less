@@ -1,0 +1,35 @@
+// 自定义过度动画
+
+// fade
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.28s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+// move
+.left-enter-active,
+.left-leave-active {
+  transition: all 0.5s;
+}
+
+.left-enter,
+.left-leave-active {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
+
+.right-enter-active,
+.right-leave-active {
+  transition: all 0.5s;
+}
+
+.right-enter,
+.right-leave-active {
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+}

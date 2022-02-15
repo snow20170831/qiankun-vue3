@@ -1,0 +1,70 @@
+// flex布局
+.flexLayout (@align: center, @justify: center, @direction: row) {
+  display: flex;
+  align-items: @align;
+  justify-content: @justify;
+  flex-direction: @direction;
+}
+
+// 伪元素图标
+.pseudoElementIcon(@url, @width: 10, @height: 10) {
+  content: '';
+  display: inline-block;
+  background: url(@url);
+  background-size: cover;
+  vertical-align: top;
+  width: @width + px;
+  height: @height + px;
+}
+
+// position 垂直居中法
+.verticalCenter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+// 字体样式
+.font(@size, @lineHeight, @weight: 400, @color: #999) {
+  font-size: @size;
+  line-height: @lineHeight;
+  font-weight: @weight;
+  color: @color
+}
+
+// 文字溢出隐藏... (rows - 显示行数)
+.overflowEllipsis(@row: 1) {
+  white-space: pre-wrap;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @row;
+}
+
+.clearfix() {
+  &::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}
+
+.multi-ellipsis(@lines) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: @lines;
+
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+
+.ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
